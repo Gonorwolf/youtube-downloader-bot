@@ -1,0 +1,4 @@
+@"
+[build]
+builder = "DOCKERFILE"
+"@ | Set-Content -Encoding ASCII railway.toml
