@@ -13,7 +13,13 @@ from telegram.constants import ParseMode
 
 # ==================== CONFIGURACIÓN ====================
 # ✅ Usa variable de entorno o fallback (RECOMENDADO: solo variable de entorno)
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "pegatu_token_aqui")
+BOT_TOKEN = (
+    os.environ.get("TELEGRAM_BOT_TOKEN")
+    or os.environ.get("TELEGRAM_BOT_TOKEN")
+    or "pegatu_token_aqui"
+)
+print("ENV TELEGRAM_BOT_TOKEN existe?:", bool(os.environ.get("TELEGRAM_BOT_TOKEN")))
+print("ENV TELEGRAM_BOT_TOKEN existe?:", bool(os.environ.get("TELEGRAM_BOT_TOKEN")))
 
 # ✅ Verificación estricta de versión para evitar errores por incompatibilidad
 import telegram
